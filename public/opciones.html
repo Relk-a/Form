@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones</title>
+    <!-- Enlace al archivo de CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuentes y estilos adicionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    /* Estilos del navbar */
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .wp-block-cover {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    .wp-block-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    .wp-block-cover_inner-container {
+        position: absolute;
+        color: #fff;
+        text-align: center;
+        font-size: 1.8em;
+        z-index: 1;
+    }
+
+    .wp-block-heading {
+        text-align: center;
+        font-size: 2.5em;
+        color: rgba(0, 0, 0, 0.877);
+    }
+
+    .wp-block-column {
+        padding: 1em;
+    }
+
+    .wp-block-buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .wp-block-button__link {
+        background-color: rgba(0, 0, 0, 0.877);
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .wp-block-button__link:hover {
+        background-color: rgb(5, 83, 3);
+    }
+
+    .wp-block-image {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    .wp-block-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wp-block-column {
+        flex: 1 1 300px;
+        margin: 10px;
+    }
+
+    .wp-block-column img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .wp-block-column h3 {
+        font-size: 2em;
+    }
+
+    .wp-block-heading {
+        font-size: 3em;
+    }
+
+    .formulario {
+        background-color: white;
+
+    }
+    .formulario label{
+        display: block;
+        margin-bottom: 8px;
+        color: black
+    }
+    .formulario input{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        border-color: black;
+        box-sizing: border-box;
+    }
+    .formulario textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        border-color: black;
+        box-sizing: border-box;
+    }
+    .formulario button{
+        background-color: white;
+        border-radius: 7px;
+        padding: 7px 15px;
+    }
+    .formulario ul, .formulario ul li{
+        display: flex;
+        margin-bottom: 10px;
+        margin-right: 15px;
+    }
+    .contactos {
+        color: rgba(0, 0, 0, 0.733);
+    }
+    .contactos a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-icons a {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #555;
+        }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Mentes Tranquilas</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="quienes.html">¿Quiénes somos?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="opciones.html">Opiniones</a>
+            <a href="canalesAtencion.html">Contactos</a>
+            <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+        </div>
+    </nav>
+
+    <div class="wp-block-group alignfull">
+        <div class="wp-block-cover alignfull">
+            <span aria-hidden="true" class="wp-block-cover_background has-background-dim"></span>
+            <img class="wp-block-coverimage-background" alt="Naturaleza Conejera"
+                src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/naturaleza-conejera.jpeg">
+            <div class="wp-block-cover_inner-container">
+                <h2><strong>Opiniones</strong></h2>
+            </div>
+        </div>
+
+        <p style="color: #555; text-align: center; margin: 20px 250px 0px 250px">Nos alegra tenerte aquí. Si tienes alguna sugerencia o queja, no dudes en dejarnos tu mensaje más abajo. ¡Tu
+            opinión es esencial para nosotros y es la base de nuestro proyecto!</p>
+
+        <div class="wp-block-spacer" style="height:29px"></div>
+
+        <h1 class="wp-block-heading has-text-align-center">Lo Que Significan Tus...</h1>
+
+        <div class="wp-block-spacer" style="height:27px"></div>
+
+        <div class="wp-block-columns alignwide">
+            <div class="wp-block-column is-vertically-aligned-center" style="text-align:left;">
+                <h3 class="wp-block-heading">Sugerencias</h3>
+                <p style="font-size: 1em; color: rgba(0, 0, 0, 0.733);">Estamos aquí para escucharte. Tus ideas y recomendaciones son fundamentales para mejorar y ofrecerte un
+                    mejor servicio. Eres nuestra inspiración y principal fuente de ideas para seguir mejorando día a día
+                    para ti.</p>
+                <div class="wp-block-buttons">
+                    <div class="wp-block-button">
+                       
+                    </div>
+                </div>
+                <div class="wp-block-spacer" style="height:16px"></div>
+            </div>
+
+            <div class="wp-block-column">
+                <figure class="wp-block-image size-full">
+                    <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/sin-titulo.png"
+                        alt="Reflexión" class="wp-image">
+                    <figcaption style="color: rgba(0, 0, 0, 0.733);"><strong style="color: black;">Foto creada por IA - Adobe.</strong> Cabe aclarar que esta imagen busca evocar
+                        una sensación de reflexión y relajación.</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="wp-block-spacer" style="height:20px"></div>
+
+        <div class="wp-block-columns alignwide are-vertically-aligned-center">
+            <div class="wp-block-column">
+                <figure class="wp-block-image size-full">
+                    <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/sin-titulo-1-1.png"
+                        alt="Atención" class="wp-image">
+                    <figcaption style="font-size: 1em; color: rgba(0, 0, 0, 0.733);"><strong style="color:black;">Foto creada por IA - Adobe.</strong>Al igual que un búho, estamos atentos y
+                        vigilantes para corregir cualquier imperfección que pueda afectar la satisfacción de nuestros
+                        usuarios.</figcaption>
+                </figure>
+            </div>
+            <div class="wp-block-column is-vertically-aligned-center" style="text-align:left;">
+                <h3 class="wp-block-heading">Quejas</h3>
+                <p style="font-size: 1em; color: rgba(0, 0, 0, 0.733);">Estamos atentos y vigilantes para corregir cualquier imperfección que pueda afectar tu satisfacción
+                    con nuestros servicios. Tu bienestar es nuestra prioridad, y estamos comprometidos a resolver
+                    cualquier problema que puedas enfrentar.</p>
+                <div class="wp-block-buttons">
+                    <div class="wp-block-button">
+                        
+                    </div>
+                </div>
+                <div class="wp-block-spacer" style="height:16px"></div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="wp-block-heading has-text-align-center">Mensaje</h2>
+    <div class="wp-block-spacer"></div>
+
+    <div class="wp-block-columns alignwide has-2-columns">
+        <div class="wp-block-column">
+            <h2 class="wp-block-heading has-text-align-center">¡Tu opinión cuenta!</h2>
+            <p style="font-size: 1em; color: rgba(0, 0, 0, 0.733);">Queremos escuchar lo que tienes para decir. Tu opinión es fundamental para nosotros y nos ayuda a mejorar
+                continuamente. No dudes en escribirnos tus sugerencias o quejas. ¡Estamos aquí para escucharte!</p>
+            <p><strong>Líneas de contacto:</strong></p>
+            <ul class="contactos">
+                <li><i class="fas fa-phone"></i> Teléfono: (+57) 3157080658 / (+57) 3134389159</li>
+                <li><i class="fas fa-envelope"></i> Correo electrónico:Mentestranquilasenlinea@gmail.com</li>
+                <li><i></i><a href="https://docs.google.com/forms/d/e/1FAIpQLSenEDNS5sLS4u91Z7wmkL5mW1RoeSF822lUJGg8r_WtYCRjVw/viewform">Link de Formulario:</a> En caso de no recibir respuesta por el mensaje de la página, por favor utiliza el siguiente <a href="https://docs.google.com/forms/d/e/1FAIpQLSenEDNS5sLS4u91Z7wmkL5mW1RoeSF822lUJGg8r_WtYCRjVw/viewform">formulario</a> para contactarnos. </li>
+            </ul>
+        </div>
+        <div class="wp-block-column">
+            <h3 class="wp-block-heading has-text-align-center">Enviar Mensaje</h3>
+            <div class="formulario">
+            <form class="quejas-sugerencias-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="contenido">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                <h4>Escoje a que area va dirigido tu mensaje</h4>
+                <ul>
+                    <li><input type="checkbox" name = "opciones" value="Sugerencia" style="color: rgba(0, 0, 0, 0.733);">Sugerencias</li>
+                    <li><input type="checkbox" name = "opciones" value="Queja" style="color: rgba(0, 0, 0, 0.733);">Quejas</li>
+                </ul>
+                <button type="submit">Enviar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; align-items: center;">
+        <footer>
+            <p>Mentestranquilasenlinea@gmail.com</p>
+            <p>Bogota D.C - Colombia</p>
+            <p>(+57) 3157085658 / (+57) 3134389159</p>
+
+            <div class="social-icons">
+                <!-- Enlace a WhatsApp -->
+                <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+        
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+        
+                <!-- Enlace a Instagram -->
+                <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+        
+                <!-- Enlace a Twitter -->
+                <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+        </footer>
+    </div>
+    <script src="scriptQuejas.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    opacity: 0.5;
+    margin: 20px 0;
+}
+
+/* Sección de portada */
+.cover {
+    position: relative;
+    background-image: url('https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/whatsapp-image-2024-08-06-at-1.34.41-pm.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Hace que el fondo sea más opaco */
+    z-index: 1; /* La capa de fondo está detrás del contenido */
+}
+
+.cover-inner {
+    position: relative;
+    z-index: 2; /* El contenido queda por encima de la opacidad */
+}
+
+.cover-heading {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.main-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    padding-top: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column-left {
+    flex: 2;
+}
+
+.column-right {
+    flex: 1;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.spacer {
+    margin: 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.877);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+.image-figure {
+    text-align: center;
+}
+
+.image-figure img {
+  max-width: 590px; /* Limita el ancho máximo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+.image-figure figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+.contactos {
+        color: rgba(0, 0, 0, 0.733);
+    }
+    .contactos a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-icons a {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #555;
+        }
+        footer{
+          margin-top: 50px;
+        }
+</style>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Mentes Tranquilas</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="quienes.html">¿Quiénes somos?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="opciones.html">Opiniones</a>
+            <a href="canalesAtencion.html">Contactos</a>
+            <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+        </div>
+    </nav>
+    <!-- Separador -->
+    <hr class="separator">
+
+    <!-- Sección de portada -->
+    <div class="cover">
+        <div class="cover-inner">
+            <h2 class="cover-heading"><strong>Acerca de</strong></h2>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <div class="row">
+            <div class="column column-left">
+                <h2 class="heading">¡Hola!</h2>
+                <div class="spacer" style="height: 9px;"></div>
+                <p style="padding-top: 30px ;">Nos place tenerte aquí, acá encontraras un apoyo alterno a tus trastornos de ansiedad que te brindara seguridad y efectividad ¡Gracias por unirte a este proyecto!</p>
+                <div class="spacer" style="height: 5px;"></div>
+                <div class="buttons">
+                    <a href="https://mentestranquilas.wordpress.com/contacto/" class="button">CONTACTANOS AQUI</a>
+                </div>
+            </div>
+            <div class="column column-right">
+                <figure class="image-figure">
+                    <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo.png" alt="Grupo de personas en unión">
+                    <figcaption><strong>Foto creada por IA – Adobe.</strong> En este caso la imagen representa un grupo de personas en unión, la comunidad de este proyecto el cual te brindara la tranquilidad que necesitas.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; align-items: center;">
+        <footer>
+            <p>Mentestranquilasenlinea@gmail.com</p>
+            <p>Bogota D.C - Colombia</p>
+            <p>(+57) 3157085658 / (+57) 3134389159</p>
+    
+            <div class="social-icons">
+                <!-- Enlace a WhatsApp -->
+                <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+        
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+        
+                <!-- Enlace a Instagram -->
+                <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+        
+                <!-- Enlace a Twitter -->
+                <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+        </footer>
+    </div>
+</body>
+</html>

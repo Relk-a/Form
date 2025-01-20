@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Mentes Tranquilas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Coloca los elementos a la izquierda */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
+    background-image: url('vaca-lobo.jpeg'); /* Imagen de fondo */
+    background-position: right center; /* Imagen alineada a la derecha */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #b3d9ff; /* Azul claro */
+    }
+    50% {
+        background-color: #99ccff; /* Azul un poco más oscuro */
+    }
+    100% {
+        background-color: #cce6ff; /* Azul más claro */
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de la columna */
+    justify-content: center;
+    width: 40%; /* Ajusta el ancho del contenedor */
+    padding-left: 50px; /* Espacio entre el borde izquierdo y el contenido */
+}
+
+.letra {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #000;
+    text-align: center; /* Centra el texto dentro de la caja */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.342);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a0dad;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #5a0c95;
+}
+
+button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #0c1f09;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="letra">Bienvenidos</h1>
+        <div class="login-container">
+            <h2>Registrate</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="text" id="email" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js">
+ </script>
+</body>
+</html>

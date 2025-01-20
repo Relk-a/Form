@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    :root {
+    --padding-var: calc(0.5 * 20px);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.cover {
+    position: relative;
+    background-image: url('https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/399d8d80-e8bc-4c7a-bc5f-048e3b5fbefd-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+.cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Hace que el fondo sea más opaco */
+    z-index: 1; /* La capa de fondo está detrás del contenido */
+}
+
+.cover-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.cover-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.spacer {
+    margin: 0;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column-left {
+    flex: 2;
+    font-size: 18px;
+}
+.column-left p{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.column-right {
+    flex: 1;
+    text-align: center;
+}
+
+.heading-center {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.877);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: black;
+}
+.image-figure{
+    text-align: center;
+}
+
+.image-figure img{
+    max-width: 590px;
+    height: auto;
+    object-fit: cover;
+}
+.image {
+    max-width: 150%;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-figure figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+.contactos {
+        color: rgba(0, 0, 0, 0.733);
+    }
+    .contactos a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-icons a {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #555;
+        }
+</style>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Mentes Tranquilas</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="quienes.html">¿Quiénes somos?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="opciones.html">Opiniones</a>
+            <a href="canalesAtencion.html">Contactos</a>
+            <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+        </div>
+    </nav>
+    <!-- Sección de portada -->
+    <div class="cover alignwide">
+        <div class="cover-inner">
+            <p class="cover-title"><strong>Contacto</strong></p>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container" style="padding: var(--padding-var); margin: 0;">
+        <div class="spacer" style="height: calc(0.25 * var(--padding-var));"></div>
+    </div>
+
+    <!-- Sección de columnas -->
+    <div class="columns alignwide">
+        <!-- Columna izquierda -->
+        <div class="column column-left">
+            <h2 class="heading-center">Canales de atención</h2>
+            <div class="spacer" style="height: 11px;"></div>
+            <p>Nuestro objetivo principal siempre será brindarte la orientación necesaria de acuerdo a lo que solicites, queremos influir en tu vida de manera positiva, brindándote un acompañamiento en tu proceso, dándote herramientas para que puedas fortalecer tu salud mental.</p>
+            <p>A continuación queremos dejarte nuestros canales de atención para que te comuniques si llegas a tener alguna duda de cualquier tipo:</p>
+            <p><strong>Correo electrónico: mentestranquilasenlinea@gmail.com</strong></p>
+            <p><strong>Teléfono: 3134389159 / 3157085658</strong></p>
+            <p><strong>¡COMUNICATE AHORA!</strong></p>
+            <div class="buttons">
+                <a href="https://mentestranquilas.wordpress.com/loja/?frame-nonce=3f8ddcd2af" class="button">SIGUIENTE</a>
+            </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="column column-right">
+            <figure class="image-figure">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-10-1.png" alt="Ilustración de naturaleza" class="image" />
+                <figcaption><strong>Foto creada por IA - Adobe.</strong> Es una ilustración relacionada con la naturaleza que representa nuestra vigilancia constante y disposición para que nuestros clientes se comuniquen con nosotros.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="spacer" style="height: 11px;"></div>
+    <div style="text-align: center; align-items: center;">
+        <footer>
+            <p>Mentestranquilasenlinea@gmail.com</p>
+            <p>Bogota D.C - Colombia</p>
+            <p>(+57) 3157085658 / (+57) 3134389159</p>
+
+            <div class="social-icons">
+                <!-- Enlace a WhatsApp -->
+                <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+        
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+        
+                <!-- Enlace a Instagram -->
+                <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+        
+                <!-- Enlace a Twitter -->
+                <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!-- HTML convertido -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <style>
+    /* CSS convertido */
+    body{
+      font-family: Arial, sans-serif;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+.cover {
+  position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 500px;
+}
+
+.cover-background {
+  background-color: #64666a;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5; /* Simula el dimRatio de Gutenberg */
+}
+
+.cover-image {
+  width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(50%);
+}
+
+.cover-inner {
+        position: absolute;
+        color: #fff;
+        text-align: center;
+        font-size: 1.4em;
+        z-index: 1;
+}
+
+.heading-center {
+  text-align: center;
+}
+.heading{
+  font-size: 40px;
+}
+.large-font {
+  font-size: 2em;
+}
+
+.group {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px; /* Ajusta según sea necesario */
+}
+
+.spacer {
+  height: 20px; /* Ajusta según el espacio necesario */
+}
+
+.columns {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Ajusta según sea necesario */
+}
+
+.column {
+  display: block;
+  align-items: center;
+  text-align: center;
+  flex-basis: 50%;
+}
+/* Estilos adicionales para column-vertical */
+.column-vertical {
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+}
+
+.column-vertical .column {
+    margin-bottom: 20px; /* Añade un espacio entre el título y el párrafo */
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+.center {
+  align-self: center;
+}
+
+.image-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.image-full img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* Mantiene la proporción de la imagen */
+}
+.parra{
+font-size: 20px;
+color: #333;
+}
+.contactos {
+        color: rgba(0, 0, 0, 0.733);
+    }
+    .contactos a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-icons a {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #555;
+        }
+        footer{
+          margin-top: 50px;
+        }
+ </style>
+ <body>
+  <nav>
+    <div class="nav-left">
+        <a href="index.html">Mentes Tranquilas</a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Inicio</a>
+      <a href="quienes.html">¿Quiénes somos?</a>
+      <a href="beneficios.html">Beneficios</a>
+      <a href="opciones.html">Opiniones</a>
+      <a href="canalesAtencion.html">Contactos</a>
+      <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+  </div>
+</nav>
+<div class="cover alignfull" style="min-height:410px">
+    <span class="cover-background" style="background-color:#64666a;"></span>
+    <img class="cover-image" alt="" src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/whatsapp-image-2024-07-29-at-12.07.06-pm.jpeg" />
+    <div class="cover-inner">
+      <h2 class="heading-center large-font"><strong>¿Quiénes somos?</strong></h2>
+    </div>
+  </div>
+  
+  <div class="group alignfull">
+    <div class="spacer"></div>
+  
+    <div class="group alignfull">
+      <div class="spacer"></div>
+  
+      <div class="columns alignwide column-vertical"> <!-- Nueva clase column-vertical -->
+          <div class="column">
+              <h2 class="heading">¿Quiénes somos?</h2>
+          </div>
+          <div class="column" style="color: #555; text-align: center; margin: 20px 0px;">
+              <p class="parra">Somos una página web dedicada a proporcionar apoyo y recursos para quienes enfrentan la ansiedad. Nos enfocamos en la psicoeducación para mejorar los síntomas de ansiedad o detectarla. Creemos que tu bienestar debe estar por encima de cualquier cosa. Recuerda, no estás solo.</p>
+          </div>
+      </div>
+  
+      <div class="spacer"></div>
+  </div>
+  
+    <div class="columns alignwide">
+      <div class="column bottom">
+        <figure class="image-full">
+          <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/sin-titulo-7.png" alt="" />
+          <figcaption style="font-size: 1em; color: rgba(0, 0, 0, 0.733);"><strong style="color: black;">Foto creada por IA - Adobe.</strong> Esta imagen simboliza la paz y la tranquilidad que experimentamos al sentirnos en armonía con nosotros mismos. La calma interior es esencial para nuestro bienestar y nos ayuda a manejar mejor los desafíos diarios.</figcaption>
+        </figure>
+      </div>
+  
+      <div class="column center">
+        <h2 class="heading">Misión</h2>
+        <p class="parra">Nuestros servicios están meticulosamente diseñados para potenciar tu bienestar emocional y físico, proporcionándote herramientas efectivas de acuerdo con tu diagnostico para reducir los ataques de ansiedad.</p>
+      </div>
+    </div>
+  
+    <div class="spacer"></div>
+  </div>
+  
+  <div class="columns alignwide">
+    <div class="column center">
+      <h2 class="heading">Visión</h2>
+      <p class="parra">Posicionarnos a futuro como una página web influyente en la sociedad actual, específicamente queremos darles un enfoque a los ataques de ansiedad, nuestro objetivo es influir de manera positiva en el bienestar mental de nuestros usuarios.</p>
+    </div>
+  
+    <div class="column bottom">
+      <figure class="image-full">
+        <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/sin-titulo-8.png" alt="" />
+        <figcaption style="font-size: 1em; color: rgba(0, 0, 0, 0.733);"><strong style="color:  black;">Foto creada por IA - Adobe.</strong>En la imagen, el hombre refleja la desesperación que pueden causar los síntomas de ansiedad. Su expresión muestra la intensidad de los sentimientos y la dificultad de manejar el estrés asociado con estos síntomas.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div style="text-align: center; align-items: center;">
+    <footer>
+        <p>Mentestranquilasenlinea@gmail.com</p>
+        <p>Bogota D.C - Colombia</p>
+        <p>(+57) 3157085658 / (+57) 3134389159</p>
+
+        <div class="social-icons">
+            <!-- Enlace a WhatsApp -->
+            <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+    
+            <!-- Enlace a Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+    
+            <!-- Enlace a Instagram -->
+            <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+    
+            <!-- Enlace a Twitter -->
+            <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+    </footer>
+</div>
+</body>
+  

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos | Mentes Tranquilas</title>
+    <link rel="stylesheet" href="/test/assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+/* Cover Section */
+.section-cover {
+    background: url('https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/sin-titulo-2.png') no-repeat center center / cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    color: #fefefe;
+}
+
+.cover-inner {
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #010101;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Full Width Sections */
+.section-full {
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.video {
+    width: 80%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    margin: 10px 0;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-links a {
+    font-size: 25px;
+    color: #333;;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #555;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">Mentes Tranquilas</a>
+            </div>
+            <div class="nav-right">
+                <a href="index.html">Inicio</a>
+                <a href="quienes.html">¿Quiénes somos?</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="opciones.html">Opiniones</a>
+                <a href="canalesAtencion.html">Contactos</a>
+                <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Call to Action Section -->
+        <div class="section-cover">
+            <div class="cover-inner">
+                <h2 class="title">¡Bienvenidos!</h2>
+                <p>Aquí encontrarás un espacio de apoyo y retroalimentación dedicado a la ansiedad y a las técnicas
+                    para controlarla. Estamos aquí para acompañarte en tu camino hacia una vida más tranquila y
+                    equilibrada.</p>
+                <a href="https://mentestranquilas.wordpress.com/sobre-3/" class="button">Conoce más</a>
+            </div>
+        </div>
+
+        <!-- Health Section -->
+        <section class="section-full">
+            <h2 class="heading">La importancia de la salud mental</h2>
+            <p>La salud mental es fundamental para nuestro bienestar general. Afecta cómo pensamos, sentimos y actuamos
+                en nuestra vida diaria. Tener una buena salud mental nos permite manejar el estrés, relacionarnos bien
+                con los demás y tomar decisiones saludables. Para comprender mejor este tema, es importante conocer la
+                opinión de expertos. Veamos este breve video.</p>
+            <iframe class="video" src="https://www.youtube.com/embed/sFfxExoU2Kw" frameborder="0"
+                allowfullscreen></iframe>
+            <figcaption>Cabe aclarar que los videos presentados son extraídos de YouTube y son de expertos en el tema.
+                Hacemos esta aclaración para evitar inconvenientes y garantizar la calidad de la información en cada
+                video presentado, dando todo el crédito a sus creadores.</figcaption>
+        </section>
+
+        <!-- Symptoms Section -->
+        <section class="section-full">
+            <h2 class="heading">¿Conoces cuáles son los síntomas que puedes presentar?</h2>
+            <p>Conocer los síntomas que puedes experimentar tú, un conocido, ser querido o familiar es fundamental. Al
+                identificar estos signos, podrás encontrar estrategias efectivas para mejorar tu salud y bienestar. Por
+                ello, a continuación te presentaremos un breve video.</p>
+            <iframe class="video" src="https://www.youtube.com/embed/C1SN2qGOGtE" frameborder="0"
+                allowfullscreen></iframe>
+            <figcaption>Cabe aclarar que los videos presentados son extraídos de YouTube y son de expertos en el tema.
+                Hacemos esta aclaración para evitar inconvenientes y garantizar la calidad de la información en cada
+                video presentado, dando todo el crédito a sus creadores.</figcaption>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p class="contact-info">mentestranquilasenlinea@gmail.com<br>Bogota D.C - Colombia<br>(+57) 3157085658 /
+                (+57) 3134389159</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/profile.php?id=61563383737249">
+                    <i class="fab fa-facebook"></i>
+                </a></li>
+                <li><a href="https://www.instagram.com/mentestranquilasenlinea?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw%3D%3D">
+                    <i class="fab fa-instagram"></i>
+                </a></li>
+                <li><a href="mailto:mentestranquilasenlinea@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a></li>
+                <li><a href="https://wa.me/qr/2NNKGGQAHM4MK1">
+                    <i class="fab fa-whatsapp"></i>
+                </a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>

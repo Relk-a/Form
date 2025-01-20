@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Cuenta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .cover {
+    position: relative;
+    background-image: url('https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/whatsapp-image-2024-07-30-at-10.07.49-am.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+.cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.281); /* Hace que el fondo sea más opaco */
+    z-index: 1; /* La capa de fondo está detrás del contenido */
+}
+
+.cover-inner {
+    position: relative;
+    padding: 20px;
+}
+
+.cover-heading {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.main-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    padding-top: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.poll {
+    margin-bottom: 20px;
+}
+
+.poll button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+}
+
+.info-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.info-image img {
+    max-width: 100%; /* La imagen se ajusta dinámicamente al ancho disponible */
+    height: auto;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+
+.column-right {
+    flex: 1;
+    text-align: center;
+}
+
+.symptoms-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.symptoms-heading {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.symptoms-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 10px; /* Espacio entre imágenes */
+}
+.symptoms-container img{
+    width: 100%;
+    height: auto;
+}
+
+.symptom {
+    text-align: center;
+    justify-content: center;
+}
+.symptom-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.symptom-link {
+    background-color: rgba(0, 0, 0, 0.877);
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 20px 20px;
+}
+.symptom-link:hover{
+    background-color: black;
+}
+.contactos {
+    color: rgba(0, 0, 0, 0.733);
+    }
+    .contactos a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-icons a {
+        font-size: 25px;
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+    }
+    .social-icons a:hover {
+        color: #555;
+    }
+</style>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Mentes Tranquilas</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="quienes.html">¿Quiénes somos?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="opciones.html">Opiniones</a>
+            <a href="canalesAtencion.html">Contactos</a>
+            <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+        </div>
+    </nav>
+    <!-- Sección de portada -->
+    <div class="cover">
+        <div class="cover-inner">
+            <h2 class="cover-heading"><strong>Tu Cuenta</strong></h2>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <div class="row">
+            <div class="column">
+                <figure>
+                    <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-2.png" alt="Dos personas construyendo un corazón con piezas" class="image">
+                    <figcaption><strong>Foto creada por IA – Adobe.</strong> “Dos personas construyendo un corazón con piezas” esta imagen representa la construcción de una salud mental sana.</figcaption>
+                </figure>
+            </div>
+            <div class="column">
+                <h2 class="heading">¡Oficialmente eres parte de esta comunidad!</h2>
+                <p>Para conocerte mejor y generar un diagnóstico, nos gustaría hacerte una pregunta:</p>
+    
+                <!-- Preguntas -->
+                <form class="poll-form" id="poll-form" >
+                    <p>¿Comprendes bien el concepto de ansiedad, te sientes seguro/a de ti mismo/a o sueles tener dificultades al enfrentarte a situaciones nuevas?</p>
+                    <input type="hidden" id="username" value="usuario_actual"> <!-- Este valor lo configuras dinámicamente -->
+                    <button type="submit" id="yes-button">SI</button>
+                    <button type="submit" id="no-button">NO</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sección de información -->
+    <div class="info-section">
+        <div class="info-container">
+            <div class="info-text">
+                <h2 class="info-heading">¡Perfecto!</h2>
+                <p>Inicialmente nos gustaría compartirte el concepto de la ansiedad. Actualmente es un tema primordial para nuestra sociedad, así que debemos darle la relevancia necesaria. Podemos llamar ansiedad a una serie de emociones como preocupación, miedos e incertidumbre, estas emociones son generadas como reacción a algunas situaciones difíciles.</p>
+            </div>
+            <div class="info-image">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-3.png" alt="niña">
+                <figcaption><strong>Foto creada por IA – Adobe.</strong> “Chica desanimada con varias flechas señalándola”, por medio de esta imagen se puede visualizar el sentimiento de tristeza e incertidumbre generado por la ansiedad.
+                </figcaption>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de síntomas -->
+    <div class="symptoms-section">
+        <h2 class="symptoms-heading">Estos son algunos de los síntomas más frecuentes</h2>
+        <div class="symptoms-container">
+            <div class="symptom">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-6.png?w=1024" alt="Incertidumbre" class="symptom-image">
+                <strong>Foto creada por IA – Adobe.</strong>
+                <a href="sintomas.html" class="symptom-link">INCERTIDUMBRE</a>
+            </div>
+            <div class="symptom">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-5.png?w=1024" alt="Falta de Concentración" class="symptom-image">
+                <strong>Foto creada por IA – Adobe.</strong>
+                <a href="sintomas.html" class="symptom-link">FALTA DE CONCENTRACIÓN</a>
+            </div>
+            <div class="symptom">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-7.png?w=1024" alt="Dolor Estomacal" class="symptom-image">
+                <strong>Foto creada por IA – Adobe.</strong>
+                <a href="sintomas.html" class="symptom-link">DOLOR ESTOMACAL</a>
+            </div>
+            <div class="symptom">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-8.png?w=1024" alt="Dolor Estomacal" class="symptom-image">
+                <strong>Foto creada por IA – Adobe.</strong>
+                <a href="sintomas.html" class="symptom-link">SUDORACIÓN</a>
+            </div>
+            <div class="symptom">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-9.png?w=1024" alt="Dolor Estomacal" class="symptom-image">
+                <strong>Foto creada por IA – Adobe.</strong>
+                <a href="sintomas.html" class="symptom-link">VISTA BORROSA</a>
+            </div>
+            <div class="symptom">
+                <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-10.png?w=1024" alt="Dolor Estomacal" class="symptom-image">
+                <strong>Foto creada por IA – Adobe.</strong>
+                <a href="sintomas.html" class="symptom-link">TAQUICARDIA</a>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; font-size: 40px;">
+        <h1>¡Selecciona con cual te identificas!</h1>
+    </div>
+    <div style="text-align: center; align-items: center;">
+        <footer>
+            <p>Mentestranquilasenlinea@gmail.com</p>
+            <p>Bogota D.C - Colombia</p>
+            <p>(+57) 3157085658 / (+57) 3134389159</p>
+
+            <div class="social-icons">
+                <!-- Enlace a WhatsApp -->
+                <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+        
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+        
+                <!-- Enlace a Instagram -->
+                <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+        
+                <!-- Enlace a Twitter -->
+                <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+        </footer>
+    </div>
+    <script src="scriptEncuestas.js"></script>
+</body>
+</html>

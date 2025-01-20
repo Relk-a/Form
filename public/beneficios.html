@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Beneficios y Servicios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    height: 500px;
+}
+
+.cover_background {
+    background-color: #64666a;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.coverimage-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.cover_inner-container {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    font-size: 1.4em;
+    z-index: 1;
+}
+.heading-center{
+    text-align: center;
+    align-items: center;
+}
+
+.group {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+.column {
+    padding: 1em;
+}
+.column img{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+.column ul{
+    color: rgba(0, 0, 0, 0.733);
+    margin: 0px 20px 50px;
+}
+.column li{
+    margin-bottom: 30px;
+}
+.column h3{
+    font-size: 20px;
+}
+.heading {
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+    max-width: 400px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.877);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: black;
+}
+
+.spacer {
+    margin: 20px 0;
+}
+.contactos {
+        color: rgba(0, 0, 0, 0.733);
+}
+.contactos a{
+    text-decoration: none;
+    color: black;
+}
+.social-icons a {
+    font-size: 25px;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #555;
+}
+footer{
+text-align: center;
+}
+</style>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Mentes Tranquilas</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="quienes.html">¿Quiénes somos?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="opciones.html">Opiniones</a>
+            <a href="canalesAtencion.html">Contactos</a>
+            <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+        </div>
+    </nav>
+    <!-- Cover Section -->
+    <div class="cover alignfull" style="min-height:410px">
+        <span class="cover_background" style="background-color:#64666a;"></span>
+        <img class="coverimage-background" src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/whatsapp-image-2024-07-26-at-10.49.46-pm.jpeg" alt="">
+        <div class="cover_inner-container">
+            <h2 class="heading-center large"><strong>Beneficios</strong></h2>
+        </div>
+    </div>
+
+    <!-- Group: Intro Section -->
+    <div class="group alignfull" style="padding: 1em;">
+        <div class="spacer" style="height: 1em;"></div>
+        <div class="columns alignwide">
+            <div class="column" style="flex-basis: 50%; font-size: 35px;">
+                <h2>Nuestros beneficios</h2>
+            </div>
+            <div class="column" style="flex-basis: 50%; font-size: 18px; color: rgba(0, 0, 0, 0.733);">
+                <p>Nuestros servicios están diseñados para mejorar tu bienestar emocional y físico al reducir los ataques de ansiedad. Queremos brindarte información detallada sobre dichos ataques, como los puedes manejar, técnicas específicas para controlarlos y mucho más, por medio de la psicoeducación.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="group alignfull" style="padding: 1em;">
+        <div class="spacer" style="height: 1em;"></div>
+        <div class="columns alignwide">
+            <div class="column">
+                <h2>Ventajas</h2>
+                <p style="color: rgba(0, 0, 0, 0.733); margin-bottom: 30px;">Al manejar mejor tus emociones y aprender a manejar tus ataques de ansiedad...</p>
+                <ul>
+                    <li>Te sentirás mucho mas tranquilo</li>
+                    <li>Fluirás de mejor manera en tus actividades diarias</li>
+                    <li>Te ayudará a manejar mejor las situaciones difíciles</li>
+                    <li>Mejorarás tu salud física</li>
+                </ul>
+                <h2>Desventajas</h2>
+                <p style="color: rgba(0, 0, 0, 0.733); margin-bottom: 30px;">Al no controlar tus emociones y ataques de ansiedad...</p>
+                <ul>
+                    <li>Tomar decisiones precipitadas o equivocadas...</li>
+                    <li>Mayor riesgo de sufrir problemas de salud...</li>
+                    <li>Impacto negativo en tus relaciones personales...</li>
+                    <li>Tendencia a evitar situaciones sociales...</li>
+                </ul>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/07/sin-titulo-4.png?w=1024" alt="">
+                    <figcaption style="color: rgba(0, 0, 0, 0.733);"><strong style="color: black;">Foto creada por IA - Adobe.</strong> La imagen significa la paz, la tranquilidad...</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="group alignfull" style="padding: 1em;">
+        <h2 style="font-size: 60px; text-align: center;">Nuestros servicios</h2>
+        <div class="columns alignwide">
+            <div class="column">
+                <h3 class="center">Evalua tu Estado de Ánimo</h3>
+                <p class="center">¿Cómo te sientes hoy? Después de acceder con tu usuario en nuestra página, queremos saber cómo estás. Tu bienestar es importante para nosotros.</p>
+                <div class="buttons">
+                    <a class="button" href="Acceder.html">Acceder</a>
+                </div>
+            </div>
+            <div class="column">
+                <h3 class="center">Líneas de Atención en Colombia</h3>
+                <p class="center"><strong>Línea 106</strong>: Disponible las 24 horas, ofrece atención psicológica y apoyo psicosocia</p>
+                <p class="center"><strong>Línea Calma</strong>: 01 8000 423 614. Ofrece orientación y apoyo emocional en situaciones de crisis</p>
+                <hr />
+            </div>
+            <div class="column">
+                <h3 class="center">Domina tu Ansiedad</h3>
+                <p class="center">¿Conoces algunas técnicas para controlar tu ansiedad? ¡Podemos ayudarte! Visita nuestra página de acceder para descubrir soluciones efectivas.</p>
+                <div class="buttons">
+                    <a class="button" href="Acceder.html">Acceder</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; align-items: center;"></div>
+        <footer>
+            <p>Mentestranquilasenlinea@gmail.com</p>
+            <p>Bogota D.C - Colombia</p>
+            <p>(+57) 3157085658 / (+57) 3134389159</p>
+
+            <div class="social-icons">
+                <!-- Enlace a WhatsApp -->
+                <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+        
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+        
+                <!-- Enlace a Instagram -->
+                <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+        
+                <!-- Enlace a Twitter -->
+                <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+        </footer>
+    </div>
+    </div>
+</body>
+</html>

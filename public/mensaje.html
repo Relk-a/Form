@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 0px; /* Aumenta el tamaño del navbar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        font-size: 1.2em; /* Aumenta el tamaño del texto */
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px; /* Espacio entre los enlaces */
+        align-items: center;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.full-width {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.group {
+    margin: 0;
+    padding: 20px;
+}
+
+.columns {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+    padding-top: 60px;
+}
+
+.text-column {
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.877);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: black
+}
+
+.contact-form {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.877);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: black
+}
+
+.spacer {
+    height: 20px;
+}
+
+.spacer-large {
+    height: 40px;
+}
+
+.spacer-small {
+    height: 10px;
+}
+.contactos {
+        color: rgba(0, 0, 0, 0.733);
+    }
+    .contactos a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-icons a {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #555;
+        }
+
+</style>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Mentes Tranquilas</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Inicio</a>
+            <a href="quienes.html">¿Quiénes somos?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="opciones.html">Opiniones</a>
+            <a href="canalesAtencion.html">Contactos</a>
+            <a href="Acceder.html" id = "authButton" style="background-color: rgba(0, 0, 0, 0.877); color: white; padding: 10px 20px; display: inline-block; border-radius: 7px;">Acceder</a>
+        </div>
+    </nav>
+    <div class="full-width group">
+        <div class="spacer"></div>
+        <div class="columns">
+            <div class="column image-column">
+                <figure>
+                    <img src="https://mentestranquilas.wordpress.com/wp-content/uploads/2024/08/sin-titulo-13.png" alt="Foto creada por IA">
+                    <figcaption><strong>Foto creada por IA</strong> - Adobe. Es la representación del amor propio de una persona.</figcaption>
+                </figure>
+            </div>
+            <div class="column text-column">
+                <h2 class="centered">¡Si tienes alguna<br>inquietud, házmelo saber,<br>estoy acá para ti !</h2>
+                <p class="centered"></p>
+                
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="full-width group contact-form">
+        <h2 class="centered">¡Estamos aquí para escucharte!</h2>
+        <div class="spacer-large"></div>
+        <form class="dudas-form" class="jetpack-form" >
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+                <input type="email" id="correo" name="correo" placeholder="Corre electrónico">
+            </div>
+            <div class="form-group">
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+        <div class="spacer-small"></div>
+    </div>
+    <div style="text-align: center; align-items: center;">
+        <footer>
+            <p>Mentestranquilasenlinea@gmail.com</p>
+            <p>Bogota D.C - Colombia</p>
+            <p>(+57) 3157085658 / (+57) 3134389159</p>
+
+            <div class="social-icons">
+                <!-- Enlace a WhatsApp -->
+                <a href="https://api.whatsapp.com/qr/2NNKGGQAHM4MK1?autoload=1&app_absent=0" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+        
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61563383737249" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+        
+                <!-- Enlace a Instagram -->
+                <a href="mailto:https://mentestranquilas.wordpress.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+        
+                <!-- Enlace a Twitter -->
+                <a href="https://www.instagram.com/mentestranquilasenlinea" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+        </footer>
+    </div>
+    <script src="scriptDudas.js"></script>
+</body>
+
+</html>
