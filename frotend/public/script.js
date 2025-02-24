@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const password = document.getElementById("password").value;
 
             try {
-                const response = await fetch("http://localhost:4000/api/auth/register", {
+                const response = await fetch("http://localhost:4000/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const email = document.getElementById("loginEmail").value;
             const password = document.getElementById("loginPassword").value;
-
+            //Cambiar el fetch del local a el link de produccion
             try {
-                const response = await fetch("http://localhost:4000/api/auth/login", {
+                const response = await fetch("http://localhost:4000/login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
