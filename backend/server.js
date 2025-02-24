@@ -1,3 +1,6 @@
+// Cargar variables de entorno
+require('dotenv').config(); // Cargar desde .env en la raíz del proyecto
+
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -18,8 +21,8 @@ const dudasRoutes = require('./routes/DudasRoute');
 const app = express();
 app.use(bodyParser.json());
 
-// Clave secreta para JWT
-const SECRET_KEY = "clave_secreta"; // Cambiar en producción a una clave más segura
+// Clave secreta para JWT (usar variable de entorno)
+const SECRET_KEY = process.env.SECRET_KEY || "clave_secreta";
 
 // Middleware
 app.use(cors({ origin: "http://localhost:4000" }));
@@ -100,17 +103,58 @@ app.post("/login", async (req, res) => {
     }
 });
 
+// Ruta para guardar la respuesta de la encuesta
+app.post("/guardarRespuesta", async (req, res) => {
+    const { username, respuesta } = req.body;
+
+    if (!username || !respuesta) {
+        return res.status(400).json({ error: "Faltan datos." });
+    }
+
+    try {
+        // Verificar si el usuario ya ha respondido
+        const existente = await Encuesta.findOne({ username });
+
+        if (existente) {
+            return res.status(400).json({ error: "Ya has votado." });
+        }
+
+        const nuevaEncuesta = new Encuesta({ username, respuesta });
+        await nuevaEncuesta.save();
+        res.status(201).json({ message: "Respuesta guardada con éxito." });
+    } catch (error) {
+        res.status(500).json({ error: "Error en el servidor." });
+    }
+});
+
+// Ruta para verificar si un usuario ya votó
+app.get("/verificarRespuesta", async (req, res) => {
+    const { username } = req.query;
+
+    if (!username) {
+        return res.status(400).json({ error: "Falta el nombre de usuario." });
+    }
+
+    try {
+        const respuesta = await Encuesta.findOne({ username });
+        res.json({ respuesta: respuesta ? respuesta.respuesta : null });
+    } catch (error) {
+        res.status(500).json({ error: "Error en el servidor." });
+    }
+});
+
 // Conexión a MongoDB
 mongoose
-    .connect("mongodb+srv://yopasalaura06:123412341@mente.zq1jg.mongodb.net/mentes", {
+    .connect(process.env.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 30000, // Aumentar el tiempo de espera
     })
     .then(() => console.log("Conectado a MongoDB"))
     .catch((err) => console.error("Error al conectar a MongoDB:", err));
 
 // Iniciar servidor
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
 });

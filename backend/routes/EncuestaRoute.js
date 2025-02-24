@@ -1,18 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const Encuesta = require('../models/Encuesta');
-const autenticarUsuario = require('../middlewares/autenticarUsuario'); // Middleware para autenticación
+const autenticarUsuario = require('../middlewares/autenticarUsuario');
+const { body, validationResult } = require('express-validator');
 
-router.post('/guardarRespuesta', autenticarUsuario, async (req, res) => {
+router.post('/guardarRespuesta', autenticarUsuario, [
+    body('respuesta').isIn(['SI', 'NO']).withMessage('Respuesta inválida.'),
+], async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+
     try {
         const { respuesta } = req.body;
 
-        if (!['SI', 'NO'].includes(respuesta)) {
-            return res.status(400).json({ error: 'Respuesta inválida.' });
-        }
-
         const nuevaEncuesta = new Encuesta({
-            usuario: req.userId, // Asume que req.userId viene del middleware
+            usuario: req.userId,
             respuesta,
         });
 

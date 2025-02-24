@@ -1,9 +1,8 @@
 {
     "rewrites":[
         {
-            "source": "/(.*)",
-            "destination": "/index.html",
-            "status": 200
+            "source": "/api/(.*)",
+            "destination": "/backend/server.js"
         }
     ]
 }

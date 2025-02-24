@@ -13,7 +13,7 @@ form.addEventListener('submit', async (event) => {
     }
 
     const data = { nombre, apellido, correo, mensaje };
-
+    //Cambiar el fetch del local a el link de produccion
     try {
         const response = await fetch('/dudas/guardar', {
             method: 'POST',
