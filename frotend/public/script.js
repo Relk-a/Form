@@ -1,3 +1,7 @@
+const API_URL = window.location.hostname.includes("localhost")
+    ? "http://localhost:4000"
+    : "https://mentesnew.vercel.app/"; // Cambia esto por la URL real de tu backend
+
 document.addEventListener("DOMContentLoaded", () => {
     // Referencias a elementos del DOM
     const registerForm = document.getElementById("registerForm");
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const password = document.getElementById("password").value;
 
             try {
-                const response = await fetch("http://localhost:4000/register", {
+                const response = await fetch(`${API_URL}/register`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -45,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const email = document.getElementById("loginEmail").value;
             const password = document.getElementById("loginPassword").value;
-            //Cambiar el fetch del local a el link de produccion
+            
             try {
-                const response = await fetch("http://localhost:4000/login", {
+                const response = await fetch(`${API_URL}/login`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
