@@ -15,7 +15,7 @@ form.addEventListener('submit', async (event) => {
     const data = { nombre, apellido, correo, mensaje };
     //Cambiar el fetch del local a el link de produccion
     try {
-        const response = await fetch('/dudas/guardar', {
+        const response = await fetch('${API_URL}/dudas/guardar', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),

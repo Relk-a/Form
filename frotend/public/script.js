@@ -1,6 +1,6 @@
 const API_URL = window.location.hostname.includes("localhost")
     ? "http://localhost:4000"
-    : "https://mentesnew.vercel.app/"; // Cambia esto por la URL real de tu backend
+    : "https://mentestranquilas.vercel.app/"; // Cambia esto por la URL real de tu backend
 
 document.addEventListener("DOMContentLoaded", () => {
     // Referencias a elementos del DOM

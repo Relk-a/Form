@@ -16,7 +16,7 @@ form.addEventListener('submit', async (event) => {
     const data = { nombre, correo, mensaje, opciones };
 
         try {
-            const response = await fetch('/quejasSugerencias/guardar', {
+            const response = await fetch('${API_URL}/quejasSugerencias/guardar', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
