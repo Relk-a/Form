@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const token = localStorage.getItem("authToken");
 
         try {
-            const response = await fetch("${API_URL}/guardarRespuesta", {
+            const response = await fetch(`${API_URL}/guardarRespuesta`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

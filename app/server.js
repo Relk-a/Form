@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 const SECRET_KEY = process.env.SECRET_KEY || "clave_secreta";
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:4000", "https://mentesnew.vercel.app"] }));
+app.use(cors({ origin: ["http://localhost:4000", "http://localhost:3000" ,"https://mentestranquilas.vercel.app"], credentials: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -148,7 +148,7 @@ mongoose
     .connect(process.env.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 30000, // Aumentar el tiempo de espera
+        serverSelectionTimeoutMS: 50000, // Tiempo de espera de 50 segundos
     })
     .then(() => console.log("Conectado a MongoDB"))
     .catch((err) => console.error("Error al conectar a MongoDB:", err));
