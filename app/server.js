@@ -28,10 +28,31 @@ const SECRET_KEY = process.env.SECRET_KEY || "clave_secreta";
 app.use(cors({ origin: ["http://localhost:4000", "http://localhost:3000" ,"https://mentestranquilas.vercel.app"], credentials: true }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use('/quejasSugerencias', quejasSugerenciasRoutes);
 app.use('/encuestas', encuestasRoutes);
 app.use('/dudas', dudasRoutes);
+
+const pages = [
+    "index.html", "Acceder", "beneficios", "canalesAtencion", "mensaje",
+    "opciones", "quienes", "register", "sintomas", "TuCuenta"
+];
+
+app.get("/:page", (req, res) => {
+    const page = req.params.page;
+    const filePath = path.join(__dirname, "../public", `${page}.html`);
+
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            res.status(404).send("Página no encontrada");
+        }
+    });
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public", "index.html"));
+});
+
 
 // Middleware para autenticación
 const authenticateToken = (req, res, next) => {

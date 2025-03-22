@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (response.ok) {
                     alert(data.message); // Mensaje del servidor
-                    window.location.href = "TuCuenta.html"; // Redirigir a la página de cuenta
+                    window.location.href = "TuCuenta"; // Redirigir a la página de cuenta
                 } else {
                     alert(`Error: ${data.message}`); // Mostrar error del servidor
                 }
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("token", data.token); // Guardar el token en localStorage
                     localStorage.setItem("username", data.username); // Guardar el nombre de usuario
                     updateAuthUI(); // Actualizar la interfaz
-                    window.location.href = "TuCuenta.html"; // Redirigir
+                    window.location.href = "TuCuenta"; // Redirigir
                 } else {
                     alert(`Error: ${data.message}`); // Mostrar error del servidor
                 }
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.removeItem("username"); // Eliminar el nombre de usuario
             alert("Sesión cerrada exitosamente.");
             updateAuthUI(); // Actualizar la interfaz
-            window.location.href = "index.html"; // Redirigir a la página principal
+            window.location.href = "index"; // Redirigir a la página principal
         });
     }
 
