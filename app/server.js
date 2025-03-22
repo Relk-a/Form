@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 const SECRET_KEY = process.env.SECRET_KEY || "clave_secreta";
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:4000", "http://localhost:3000" ,"https://mentestranquilas.vercel.app"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:4000", "http://localhost:3000" ,"https://formfront-snowy.vercel.app"], credentials: true }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, '/public')));

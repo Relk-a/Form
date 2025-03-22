@@ -1,6 +1,6 @@
 const API_URL = window.location.hostname.includes("localhost")
     ? "http://localhost:4000"
-    : "https://mentestranquilas.vercel.app/";
+    : "https://formfront-snowy.vercel.app";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Referencias a elementos del DOM
