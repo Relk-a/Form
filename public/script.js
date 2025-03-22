@@ -1,6 +1,6 @@
 const API_URL = window.location.hostname.includes("localhost")
     ? "http://localhost:4000"
-    : "https://formfront-snowy.vercel.app";
+    : "https://formbacknew.vercel.app/";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Referencias a elementos del DOM
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (response.ok) {
                     alert(data.message); // Mensaje del servidor
-                    window.location.href = "TuCuenta"; // Redirigir a la página de cuenta
+                    window.location.href = "TuCuenta.html"; // Redirigir a la página de cuenta
                 } else {
                     alert(`Error: ${data.message}`); // Mostrar error del servidor
                 }
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("token", data.token); // Guardar el token en localStorage
                     localStorage.setItem("username", data.username); // Guardar el nombre de usuario
                     updateAuthUI(); // Actualizar la interfaz
-                    window.location.href = "TuCuenta"; // Redirigir
+                    window.location.href = "TuCuenta.html"; // Redirigir
                 } else {
                     alert(`Error: ${data.message}`); // Mostrar error del servidor
                 }
