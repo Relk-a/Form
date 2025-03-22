@@ -111,3 +111,35 @@ function updateAuthUI() {
         if (welcomeText) welcomeText.textContent = ""; // Limpiar mensaje de bienvenida
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    handleRouting();
+    window.addEventListener("popstate", handleRouting);
+});
+
+function handleRouting() {
+    const path = window.location.pathname.replace("/", "") || "index";
+    loadPage(path);
+}
+
+function loadPage(page) {
+    fetch(`${page}.html`)
+        .then(response => {
+            if (!response.ok) throw new Error("Página no encontrada");
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById("content").innerHTML = html;
+        })
+        .catch(error => {
+            document.getElementById("content").innerHTML = "<h2>Error 404: Página no encontrada</h2>";
+        });
+}
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault();
+        const page = event.target.getAttribute("href").replace(".html", "");
+        history.pushState({}, "", `/${page}`);
+        loadPage(page);
+    });
+});
