@@ -1,6 +1,6 @@
 const API_URL = window.location.hostname.includes("localhost")
     ? "http://localhost:4000"
-    : "https://formbacknew.vercel.app/";
+    : "https://form-i6ew.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Referencias a elementos del DOM
@@ -46,10 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loginForm) {
         loginForm.addEventListener("submit", async (e) => {
             e.preventDefault();
-
-            const email = document.getElementById("loginEmail").value;
-            const password = document.getElementById("loginPassword").value;
-            
+    
+            const email = document.getElementById("loginEmail").value.trim();
+            const password = document.getElementById("loginPassword").value.trim();
+    
+            if (!email || !password) {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+    
             try {
                 const response = await fetch(`${API_URL}/login`, {
                     method: "POST",
@@ -58,21 +63,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                     body: JSON.stringify({ email, password }),
                 });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    alert(data.message); // Mensaje de inicio de sesión exitoso
-                    localStorage.setItem("token", data.token); // Guardar el token en localStorage
-                    localStorage.setItem("username", data.username); // Guardar el nombre de usuario
-                    updateAuthUI(); // Actualizar la interfaz
-                    window.location.href = "TuCuenta.html"; // Redirigir
-                } else {
-                    alert(`Error: ${data.message}`); // Mostrar error del servidor
+    
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || "Error en el servidor");
                 }
+    
+                const data = await response.json();
+    
+                alert(data.message); // Mensaje de éxito
+                localStorage.setItem("token", data.token); // Guardar token
+                localStorage.setItem("username", data.username || email); // Guardar usuario
+    
+                updateAuthUI(); // Actualizar la interfaz de usuario
+    
+                window.location.href = "/TuCuenta"; // Redirigir (asegúrate de que esta ruta sea accesible)
             } catch (error) {
-                console.error("Error:", error);
-                alert("Ocurrió un error. Por favor, inténtalo de nuevo.");
+                console.error("Error en el inicio de sesión:", error);
+                alert(`Error: ${error.message || "No se pudo conectar al servidor."}`);
             }
         });
     }
