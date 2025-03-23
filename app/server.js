@@ -34,7 +34,7 @@ app.use('/encuestas', encuestasRoutes);
 app.use('/dudas', dudasRoutes);
 
 const pages = [
-    "index.html", "Acceder", "beneficios", "canalesAtencion", "mensaje",
+    "index", "Acceder", "beneficios", "canalesAtencion", "mensaje",
     "opciones", "quienes", "register", "sintomas", "TuCuenta"
 ];
 
