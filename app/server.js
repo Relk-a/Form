@@ -105,6 +105,8 @@ app.post("/login", async (req, res) => {
     }
 
     try {
+        console.log("Intentando iniciar sesión con:", email); // Log para depuración
+
         const user = await User.findOne({ email });
         if (!user) {
             return res.status(401).json({ message: "Correo no registrado." });
@@ -115,7 +117,13 @@ app.post("/login", async (req, res) => {
             return res.status(401).json({ message: "Contraseña incorrecta." });
         }
 
-        const token = jwt.sign({ id: user._id, username: user.username }, SECRET_KEY, { expiresIn: "1h" });
+        const token = jwt.sign(
+            { id: user._id, username: user.username },
+            process.env.SECRET_KEY || "clave_secreta",
+            { expiresIn: "1h" }
+        );
+
+        console.log("Usuario autenticado:", user.username); // Log para depuración
 
         res.status(200).json({ message: "Inicio de sesión exitoso.", token, username: user.username });
     } catch (error) {
