@@ -28,7 +28,7 @@ const SECRET_KEY = process.env.SECRET_KEY || "clave_secreta";
 app.use(cors({ origin: ["http://localhost:4000", "http://localhost:3000" ,"https://form-i6ew.onrender.com"], credentials: true }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '../public')));
 app.use('/quejasSugerencias', quejasSugerenciasRoutes);
 app.use('/encuestas', encuestasRoutes);
 app.use('/dudas', dudasRoutes);
