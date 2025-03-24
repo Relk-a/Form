@@ -1,3 +1,7 @@
+const API_URL = window.location.hostname.includes("localhost")
+    ? "http://localhost:4000"
+    : "https://form-i6ew.onrender.com";
+
 const form = document.querySelector('.dudas-form');
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); // Evita que se recargue la página

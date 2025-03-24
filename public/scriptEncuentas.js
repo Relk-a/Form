@@ -1,3 +1,7 @@
+const API_URL = window.location.hostname.includes("localhost")
+    ? "http://localhost:4000"
+    : "https://form-i6ew.onrender.com";
+
 document.addEventListener("DOMContentLoaded", async () => {
     const yesButton = document.getElementById("yes-button");
     const noButton = document.getElementById("no-button");
